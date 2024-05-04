@@ -1,0 +1,4 @@
+*.class
+*.init
+*.bin
+.idea
