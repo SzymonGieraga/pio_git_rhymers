@@ -5,13 +5,10 @@ import org.junit.Test;
 
 public class RhymersJUnitTest {
 
-    public static final int TEST_VALUE = 4;
-    public static final int IN = 888;
-
     @Test
     public void testCountIn() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-        final int testValue = TEST_VALUE;
+        final int testValue = 4;
         rhymer.countIn(testValue);
 
         int result = rhymer.peekaboo();
@@ -24,7 +21,7 @@ public class RhymersJUnitTest {
         boolean result = rhymer.callCheck();
         Assert.assertEquals(true, result);
 
-        rhymer.countIn(IN);
+        rhymer.countIn(888);
 
         result = rhymer.callCheck();
         Assert.assertEquals(false, result);
@@ -37,7 +34,7 @@ public class RhymersJUnitTest {
         for (int i = 0; i < STACK_CAPACITY; i++) {
             boolean result = rhymer.isFull();
             Assert.assertEquals(false, result);
-            rhymer.countIn(IN);
+            rhymer.countIn(888);
         }
 
         boolean result = rhymer.isFull();
@@ -52,7 +49,7 @@ public class RhymersJUnitTest {
         int result = rhymer.peekaboo();
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
-        final int testValue = TEST_VALUE;
+        final int testValue = 4;
         rhymer.countIn(testValue);
 
         result = rhymer.peekaboo();
@@ -69,7 +66,7 @@ public class RhymersJUnitTest {
         int result = rhymer.countOut();
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
-        final int testValue = TEST_VALUE;
+        final int testValue = 4;
         rhymer.countIn(testValue);
 
         result = rhymer.countOut();
