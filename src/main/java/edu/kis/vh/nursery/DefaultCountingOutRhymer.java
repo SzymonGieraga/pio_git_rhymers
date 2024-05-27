@@ -3,6 +3,8 @@ package edu.kis.vh.nursery;
 public class DefaultCountingOutRhymer {
     public static final int EMPTY_STACK_VALUE = -1;
     public static final int LIMIT = 12;
+
+    public static final int FULL_TAB = LIMIT - 1;
     private final int[] numbers = new int[LIMIT];
 
 
@@ -18,18 +20,18 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean isFull() {
-        return total == 11;
+        return total == FULL_TAB;
     }
 
     protected int peekaboo() {
         if (callCheck())
-            return EMPTY_STACK_VALUE;
+            return -1;
         return numbers[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return EMPTY_STACK_VALUE;
+            return -1;
         return numbers[total--];
     }
 
