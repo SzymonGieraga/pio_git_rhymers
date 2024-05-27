@@ -5,6 +5,7 @@ public class DefaultCountingOutRhymer {
     public static final int LIMIT = 12;
 
     public static final int FULL_TAB = LIMIT - 1;
+    public static final int EMPTY_TAB = -1;
     private final int[] numbers = new int[LIMIT];
 
 
@@ -25,13 +26,13 @@ public class DefaultCountingOutRhymer {
 
     protected int peekaboo() {
         if (callCheck())
-            return -1;
+            return EMPTY_TAB;
         return numbers[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return -1;
+            return EMPTY_TAB;
         return numbers[total--];
     }
 
