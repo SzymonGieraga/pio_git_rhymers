@@ -29,7 +29,7 @@ public class IntLinkedList {
     public int top() {
         if (isEmpty())
             return EMPTY_TAB;
-        return last.value;
+        return last.getValue();
 
     }
 
