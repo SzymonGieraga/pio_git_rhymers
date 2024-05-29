@@ -77,32 +77,65 @@ public class IntLinkedList {
         return ret;
     }
 
+    /**
+     * Klasa reprezentująca węzeł w połączonej liście jednokierunkowej.
+     */
     private static class Node {
-
+        /**
+         * Wartość przechowywana w węźle*/
         private final int value;
+        /**
+         * Referencja do poprzedniego węzła*/
         private Node prev;
+        /**
+         * Referencja do następnego węzła.
+         */
         private Node next;
-
+        /**
+         * Konstruktor tworzący węzeł o podanej wartości.
+         *
+         * @param value wartość przechowywana w węźle
+         */
         public Node(int value) {
             this.value = value;
         }
-
+        /**
+         * Zwraca wartość przechowywaną w węźle.
+         *
+         * @return wartość przechowywana w węźle
+         */
         public int getValue() {
             return value;
         }
-
+        /**
+         * Zwraca poprzedni węzeł.
+         *
+         * @return poprzedni węzeł
+         */
         public Node getPrev() {
             return prev;
         }
-
+        /**
+         * Ustawia poprzedni węzeł.
+         *
+         * @param prev poprzedni węzeł
+         */
         public void setPrev(Node prev) {
             this.prev = prev;
         }
-
+        /**
+         * Zwraca następny węzeł.
+         *
+         * @return następny węzeł
+         */
         public Node getNext() {
             return next;
         }
-
+        /**
+         * Ustawia następny węzeł.
+         *
+         * @param next następny węzeł
+         */
         public void setNext(Node next) {
             this.next = next;
         }
